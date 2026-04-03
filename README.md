@@ -130,6 +130,11 @@ curl -X POST https://your-domain.com/api/document-analyze \
 ### Fallback Mechanism
 If the AI model is unavailable, the system falls back to regex-based extraction for dates, amounts, and basic text truncation for summaries.
 
+## AI Tools Used
+- **Groq API (LLaMA 3 8B):** Used as the core language model to intelligently read extracted text, summarize context, extract complex entities (names, dates, organizations, amounts), and determine overall sentiment.
+- **Tesseract OCR:** Used as an intelligent AI-driven neural net backend for Optical Character Recognition to extract text layers from images and rasterized PDF pages.
+- **Antigravity AI Assistant:** Used as a pair-programming coding assistant to help build the FASTAPI backend, implement Groq models, design the deployment pipeline, and write this documentation.
+
 ## Project Structure
 ```
 ├── README.md                 # This file
